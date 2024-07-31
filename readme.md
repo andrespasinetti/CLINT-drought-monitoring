@@ -5,6 +5,7 @@ The thesis was developed in the context of the European Horizon 2020 project CLI
 Title: Multi-task learning for drought impact monitoring across Europe
 
 Author: Andrés Pasinetti
+
 Advisor: Marcello Restelli
 Co-advisors: Paolo Bonetti, Andrea Francesco Castelletti, Matteo Giuliani, Alberto Maria Metelli
 
