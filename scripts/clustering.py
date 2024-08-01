@@ -142,7 +142,6 @@ if __name__ == "__main__":
     parser.add_argument('--use_area_weight', type=bool, default=False)
     parser.add_argument('--use_only_indexes', type=bool, default=False)
     parser.add_argument('--selected_features', type=int, nargs='+')    
-
     parser.add_argument('--time', type=str, choices=['month', 'year', 'month_year'], help='Description of parameter')
     parser.add_argument('--no_pkl', type=bool, default=False)
 
