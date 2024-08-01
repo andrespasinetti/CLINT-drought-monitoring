@@ -6,24 +6,22 @@ This directory contains the Python scripts used to process data and generate res
 **Description**: computes clusterings on the dataset. If n_splits is greater than 1, it computes one clustering for each cross-validation split on the training folds.
 
 **Arguments**:
-- `--n_splits` (int): Number of splits for cross-validation. Default is 1.
-- `--drop_years` (int): Number of years to randomly drop in the training set of each cross-validation split. Default is 0.
-- `--test_size` (int): Size of the test set outside cross-validation in years. Default is 0.
-- `--clustering` (str): Clustering method to use ('hierarchical', 'NonLinCTFA', 'NonLinCTFA_estimate').
-- `--linkage` (str): Linkage criterion to use for hierarchical clustering ('complete', 'average').
-- `--initial_threshold` (float, optional): Initial threshold value for hierarchical clustering.
-- `--threshold_list` (float, nargs='+'): List of thresholds for hierarchical clustering in descending order.
-- `--epsilon_list` (float, nargs='+'): List of epsilon values for NonLinCTFA clustering.
-- `--use_area_weight` (bool): Whether to use area weights. Default is False.
-- `--use_only_indexes` (bool): Whether to use only indexes. Default is False.
-- `--selected_features` (int, nargs='+', optional): List of selected feature indexes.
-- `--time` (str, choices=['month', 'year', 'month_year']): Time dimension for features.
-- `--no_pkl` (bool): Whether to skip saving the clustering object as a pickle file. Default is False.
+- `--n_splits` (`int`): Number of splits for cross-validation. Default is 1.
+- `--drop_years` (`int`): Number of years to randomly drop in the training set of each cross-validation split. Default is 0.
+- `--test_size` (`int`): Size of the test set outside cross-validation in years. Default is 0.
+- `--clustering` (`str`): Clustering method to use ('hierarchical', 'NonLinCTFA', 'NonLinCTFA_estimate').
+- `--linkage` (`str`): Linkage criterion to use for hierarchical clustering ('complete', 'average').
+- `--initial_threshold` (`float`, optional): Initial threshold value for hierarchical clustering.
+- `--threshold_list` (`float`, `nargs='+'`): List of thresholds for hierarchical clustering in descending order.
+- `--epsilon_list` (`float`, `nargs='+'`): List of epsilon values for NonLinCTFA clustering.
+- `--use_area_weight` (`bool`): Whether to use area weights. Default is False.
+- `--use_only_indexes` (`bool`): Whether to use only indexes. Default is False.
+- `--selected_features` (`int`, `nargs='+'`, optional): List of selected feature indexes.
+- `--time` (`str`, `choices=['month', 'year', 'month_year']`): Time dimension for features.
+- `--no_pkl` (`bool`): Whether to skip saving the clustering object as a pickle file. Default is False.
 
 **Outputs**:
-A folder containing the derived clusterings for each fold will be created under ../results/training_{n_splits}.
-- `clustering.pkl`: (if --no_pkl is not set) Pickle file containing the hierarchical clustering object.
-- `clustering.json`: JSON file containing the clusters.
+The predicted target csv is stored in ../results/training_{n_splits}/predictions.
 
 
 ### `multiple_models_CV.py`
@@ -45,6 +43,10 @@ A folder containing the derived clusterings for each fold will be created under 
 - `--max_num_features` (`int`): Maximum number of features to use. Optional.
 - `--model_type` (`str`): Type of model to use (e.g., 'MLPR'). Required.
 - `--num_processes` (`int`): Number of processes to use. Default is the maximum available processors.
+
+
+
+
 
 - `multiple_models_nested_wrapper_CV.py`: Brief description of what this script does.
 - `multiple_models_CMI_CV.py`: Brief description of what this script does.
